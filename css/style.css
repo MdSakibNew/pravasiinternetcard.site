@@ -864,3 +864,78 @@ section{
 .package-card .price span{
   font-size:18px;
 }
+
+/* ======================================================
+   ORDER PAGE
+====================================================== */
+
+.order-page{
+  min-height:100vh;
+  background:linear-gradient(180deg,#f7fbf9,#ffffff);
+}
+
+.order-box{
+  max-width:650px;
+  margin:45px auto 0;
+  padding:30px;
+}
+
+.order-box label{
+  display:block;
+  font-weight:800;
+  margin:18px 0 8px;
+  color:var(--dark);
+}
+
+.order-box input,
+.order-box select,
+.order-box textarea{
+  width:100%;
+  padding:15px 16px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  font-size:17px;
+  font-family:inherit;
+  outline:none;
+}
+
+.order-box textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+.price-box{
+  margin-top:18px;
+  padding:18px;
+  border-radius:16px;
+  background:var(--primary-light);
+  font-size:22px;
+  font-weight:800;
+  color:var(--dark);
+}
+
+.copy-row{
+  display:flex;
+  gap:10px;
+}
+
+.copy-row button{
+  border:none;
+  padding:0 20px;
+  border-radius:14px;
+  background:var(--primary);
+  color:#fff;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.payment-note{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:15px;
+}
+
+.order-submit{
+  width:100%;
+  margin-top:25px;
+}
