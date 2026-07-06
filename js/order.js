@@ -152,3 +152,72 @@ copyBtn.innerText="Copy";
 }
 
 }
+
+/* ======================================================
+   WHATSAPP ORDER
+====================================================== */
+
+const submit=document.getElementById("submitOrder");
+
+if(submit){
+
+submit.onclick=function(){
+
+const name=document.getElementById("customerName").value;
+
+const country=document.getElementById("orderCountry").options[
+document.getElementById("orderCountry").selectedIndex].text;
+
+const pack=document.getElementById("orderPackage").value;
+
+const price=document.getElementById("orderPackage").selectedOptions[0].dataset.price;
+
+const trx=document.getElementById("trxId").value;
+
+const note=document.getElementById("orderNote").value;
+
+if(name==""){
+
+alert("আপনার নাম লিখুন");
+
+return;
+
+}
+
+if(trx==""){
+
+alert("Transaction ID লিখুন");
+
+return;
+
+}
+
+const message=`
+আসসালামু আলাইকুম।
+
+আমি একটি ইন্টারনেট কার্ড অর্ডার করতে চাই।
+
+নামঃ ${name}
+
+দেশঃ ${country}
+
+প্যাকেজঃ ${pack}
+
+মূল্যঃ ${price} টাকা
+
+Transaction IDঃ ${trx}
+
+নোটঃ ${note}
+`;
+
+window.open(
+
+"https://wa.me/8801627330634?text="+encodeURIComponent(message),
+
+"_blank"
+
+);
+
+}
+
+}
