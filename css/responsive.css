@@ -166,11 +166,20 @@
 }
 
 @media (max-width: 768px){
-  .proof-grid{
+  .proof-item{
     grid-template-columns:1fr;
+    padding:18px;
   }
 
-  .proof-card img{
+  .proof-item:nth-child(even) .proof-img{
+    order:0;
+  }
+
+  .proof-img img{
     height:300px;
+  }
+
+  .proof-text h3{
+    font-size:28px;
   }
 }
