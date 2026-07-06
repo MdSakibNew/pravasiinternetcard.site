@@ -561,3 +561,71 @@ section{
     font-size:16px;
 
 }
+
+
+/* ======================================================
+   OWNER SECTION
+====================================================== */
+
+.owner-section{
+  background:linear-gradient(180deg,#f7fbf9,#ffffff);
+}
+
+.owner-container{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.owner-photo{
+  padding:18px;
+  position:relative;
+}
+
+.owner-photo img{
+  width:100%;
+  height:470px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.owner-label{
+  margin-top:14px;
+  padding:15px;
+  border-radius:16px;
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  font-weight:700;
+}
+
+.owner-content h2{
+  margin-top:18px;
+  font-size:42px;
+  color:var(--dark);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.owner-content p{
+  margin-top:18px;
+  font-size:18px;
+  color:var(--muted);
+}
+
+.owner-points{
+  margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.owner-points span{
+  background:#fff;
+  padding:14px 16px;
+  border-radius:14px;
+  box-shadow:var(--shadow-sm);
+  font-weight:700;
+}
