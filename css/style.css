@@ -629,3 +629,43 @@ section{
   box-shadow:var(--shadow-sm);
   font-weight:700;
 }
+
+
+/* ======================================================
+   PROOF SECTION
+====================================================== */
+
+.proof-section{
+  background:#fff;
+}
+
+.proof-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+}
+
+.proof-card{
+  padding:18px;
+}
+
+.proof-card img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid var(--border);
+}
+
+.proof-card h3{
+  margin-top:18px;
+  font-size:25px;
+  color:var(--dark);
+}
+
+.proof-card p{
+  margin:8px 0 18px;
+  color:var(--muted);
+  font-size:17px;
+}
