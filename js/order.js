@@ -46,3 +46,85 @@ countryTabs.forEach(tab => {
 });
 
 renderPackages("saudi");
+
+/* ======================================================
+   ORDER PAGE
+====================================================== */
+
+const packageSelect = document.getElementById("orderPackage");
+const countrySelect = document.getElementById("orderCountry");
+const priceText = document.getElementById("orderPrice");
+
+if (packageSelect) {
+
+    function loadPackages(country){
+
+        packageSelect.innerHTML="";
+
+        packageData[country].forEach(item=>{
+
+            const option=document.createElement("option");
+
+            option.value=item.gb;
+
+            option.dataset.price=item.price;
+
+            option.textContent=item.gb+" - "+item.price+" টাকা";
+
+            packageSelect.appendChild(option);
+
+        });
+
+        updatePrice();
+
+    }
+
+    function updatePrice(){
+
+        const selected=packageSelect.options[packageSelect.selectedIndex];
+
+        priceText.innerText=selected.dataset.price+" টাকা";
+
+    }
+
+    countrySelect.onchange=function(){
+
+        loadPackages(this.value);
+
+    }
+
+    packageSelect.onchange=updatePrice;
+
+    loadPackages("saudi");
+
+
+
+    /* URL থেকে package select */
+
+    const params=new URLSearchParams(window.location.search);
+
+    const country=params.get("country");
+
+    const pack=params.get("package");
+
+
+
+    if(country){
+
+        countrySelect.value=country;
+
+        loadPackages(country);
+
+    }
+
+
+
+    if(pack){
+
+        packageSelect.value=pack;
+
+        updatePrice();
+
+    }
+
+}
