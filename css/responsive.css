@@ -164,3 +164,13 @@
     height:300px;
   }
 }
+
+@media (max-width: 768px){
+  .proof-grid{
+    grid-template-columns:1fr;
+  }
+
+  .proof-card img{
+    height:300px;
+  }
+}
