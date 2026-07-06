@@ -135,3 +135,32 @@
     grid-template-columns:1fr;
 
 }
+
+
+@media (max-width: 992px){
+  .owner-container{
+    grid-template-columns:1fr;
+  }
+
+  .owner-content h2{
+    font-size:32px;
+  }
+
+  .owner-photo img{
+    height:360px;
+  }
+}
+
+@media (max-width: 576px){
+  .owner-points{
+    grid-template-columns:1fr;
+  }
+
+  .owner-content h2{
+    font-size:28px;
+  }
+
+  .owner-photo img{
+    height:300px;
+  }
+}
