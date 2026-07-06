@@ -1,1 +1,51 @@
+/* ===========================
+   প্রবাসী ইন্টারনেট কার্ড
+   Main Theme Variables
+=========================== */
 
+:root {
+  --primary: #0f8f4f;
+  --primary-dark: #066b39;
+  --primary-light: #e9fff3;
+
+  --blue: #1877f2;
+  --blue-light: #eaf3ff;
+
+  --gold: #f6b500;
+  --gold-light: #fff7d6;
+
+  --dark: #102018;
+  --text: #1f2933;
+  --muted: #667085;
+
+  --white: #ffffff;
+  --bg: #f7fbf9;
+  --card: #ffffff;
+
+  --danger: #e53935;
+  --success: #16a34a;
+
+  --border: #e5e7eb;
+
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 12px 35px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 18px 55px rgba(0, 0, 0, 0.18);
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --container: 1180px;
+
+  --font-main: "Noto Sans Bengali", "Hind Siliguri", Arial, sans-serif;
+
+  --transition: all 0.3s ease;
+}
+
+/* Dark style section use */
+:root {
+  --dark-bg: #081b12;
+  --dark-card: #10261a;
+  --dark-text: #f8fff9;
+}
