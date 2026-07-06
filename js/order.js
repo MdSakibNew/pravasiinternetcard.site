@@ -128,3 +128,27 @@ if (packageSelect) {
     }
 
 }
+
+/* ======================================================
+   COPY BKASH
+====================================================== */
+
+const copyBtn=document.getElementById("copyBkash");
+
+if(copyBtn){
+
+copyBtn.onclick=function(){
+
+navigator.clipboard.writeText("01862097823");
+
+copyBtn.innerText="Copied";
+
+setTimeout(()=>{
+
+copyBtn.innerText="Copy";
+
+},1500);
+
+}
+
+}
