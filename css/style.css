@@ -765,3 +765,102 @@ section{
   background:var(--primary);
   transform:scale(1.25);
 }
+
+/* ======================================================
+   PACKAGES SECTION
+====================================================== */
+
+.packages-section{
+  background:linear-gradient(180deg,#f7fbf9,#ffffff);
+}
+
+.country-tabs{
+  margin-top:38px;
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.country-tab{
+  border:none;
+  padding:13px 24px;
+  border-radius:999px;
+  background:#fff;
+  box-shadow:var(--shadow-sm);
+  font-size:17px;
+  font-weight:800;
+  cursor:pointer;
+  color:var(--dark);
+}
+
+.country-tab.active{
+  background:var(--primary);
+  color:#fff;
+}
+
+.package-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.package-card{
+  background:#fff;
+  border-radius:24px;
+  padding:28px 22px;
+  box-shadow:var(--shadow-sm);
+  text-align:center;
+  border:2px solid transparent;
+  transition:.25s;
+  position:relative;
+  overflow:hidden;
+}
+
+.package-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--primary);
+}
+
+.package-card.popular::before{
+  content:"জনপ্রিয়";
+  position:absolute;
+  top:14px;
+  right:-34px;
+  background:var(--gold);
+  color:#111;
+  padding:6px 42px;
+  font-weight:900;
+  transform:rotate(35deg);
+  font-size:13px;
+}
+
+.package-card h3{
+  font-size:32px;
+  color:var(--primary);
+}
+
+.package-card .minutes{
+  margin-top:8px;
+  font-size:21px;
+  font-weight:800;
+  color:var(--dark);
+}
+
+.package-card .validity{
+  margin:14px 0;
+  color:var(--muted);
+}
+
+.package-card .price{
+  font-size:34px;
+  font-weight:900;
+  color:var(--dark);
+  margin-bottom:18px;
+}
+
+.package-card .price span{
+  font-size:18px;
+}
