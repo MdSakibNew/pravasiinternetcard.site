@@ -263,3 +263,229 @@ section{
     margin-bottom:40px;
 
 }
+
+
+/* ======================================================
+   Loader
+====================================================== */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#eafff3,#ffffff);
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.loader-box{
+    text-align:center;
+    background:#fff;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:var(--shadow-md);
+}
+
+.loader-box img{
+    width:85px;
+    height:85px;
+    object-fit:contain;
+    margin:0 auto 12px;
+}
+
+.loader-box h3{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    font-size:22px;
+    color:var(--dark);
+}
+
+.loader-box p{
+    color:var(--muted);
+    margin-top:6px;
+}
+
+/* ======================================================
+   Header
+====================================================== */
+
+.site-header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+}
+
+.header-container{
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-logo{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
+
+.brand-name{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:24px;
+    font-weight:800;
+    color:var(--dark);
+    white-space:nowrap;
+}
+
+.verified-badge,
+.title-badge{
+    width:18px;
+    height:18px;
+    object-fit:contain;
+    display:inline-block;
+}
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:26px;
+}
+
+.nav-menu a{
+    font-weight:700;
+    color:var(--text);
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+    color:var(--primary);
+}
+
+.nav-btn{
+    background:var(--primary);
+    color:#fff!important;
+    padding:11px 22px;
+    border-radius:999px;
+    box-shadow:var(--shadow-sm);
+}
+
+.menu-btn{
+    display:none;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    font-size:24px;
+}
+
+/* ======================================================
+   Hero
+====================================================== */
+
+.hero{
+    padding:95px 0;
+    background:
+      radial-gradient(circle at top left, rgba(15,143,79,.16), transparent 35%),
+      radial-gradient(circle at bottom right, rgba(24,119,242,.13), transparent 32%),
+      linear-gradient(180deg,#ffffff,#f4fff8);
+}
+
+.hero-container{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:55px;
+    align-items:center;
+}
+
+.hero-content h1{
+    font-size:54px;
+    line-height:1.22;
+    margin-top:20px;
+    color:var(--dark);
+    font-weight:800;
+}
+
+.hero-content h1 .title-badge{
+    width:24px;
+    height:24px;
+    vertical-align:middle;
+}
+
+.hero-content p{
+    margin-top:22px;
+    font-size:19px;
+    color:var(--muted);
+    max-width:650px;
+}
+
+.hero-checks{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:28px;
+}
+
+.hero-checks span{
+    background:#fff;
+    padding:13px 15px;
+    border-radius:14px;
+    box-shadow:var(--shadow-sm);
+    font-weight:700;
+    color:var(--dark);
+}
+
+.hero-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:32px;
+}
+
+.hero-image{
+    padding:18px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-image img{
+    width:100%;
+    height:440px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.hero-image-info{
+    margin-top:14px;
+    background:linear-gradient(135deg,var(--primary),var(--blue));
+    color:#fff;
+    padding:18px;
+    border-radius:18px;
+}
+
+.hero-image-info strong{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:20px;
+}
+
+.hero-image-info span{
+    display:block;
+    margin-top:5px;
+    opacity:.92;
+}
