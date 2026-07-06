@@ -1,1 +1,265 @@
+/* ======================================================
+   প্রবাসী ইন্টারনেট কার্ড
+   Base Style
+   Version: 1.0
+====================================================== */
 
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+@import url("variables.css");
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Hind Siliguri',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    overflow-x:hidden;
+
+}
+
+/* Selection */
+
+::selection{
+
+    background:var(--primary);
+    color:#fff;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+/* Image */
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+/* Container */
+
+.container{
+
+    width:min(92%,1180px);
+    margin:auto;
+
+}
+
+/* Section */
+
+section{
+
+    padding:80px 0;
+
+}
+
+/* Title */
+
+.section-title{
+
+    font-size:34px;
+    font-weight:700;
+    text-align:center;
+    color:var(--dark);
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+    color:var(--muted);
+    margin-top:12px;
+    font-size:17px;
+
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    background:#fff;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* Card */
+
+.card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.30s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* Badge */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    background:#eefaf3;
+
+    color:var(--primary);
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+/* Utility */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
