@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>কার্ড অর্ডার করুন | প্রবাসী ইন্টারনেট কার্ড</title>
 
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-container">
+    <a href="../index.html" class="brand">
+      <img class="brand-logo" src="../images/logoS.png" alt="logo">
+      <span class="brand-name">
+        প্রবাসী ইন্টারনেট কার্ড
+        <img class="verified-badge" src="../images/icons/fb-verified-badge.png" alt="verified">
+      </span>
+    </a>
+    <a href="../index.html" class="btn">হোমে যান</a>
+  </div>
+</header>
+
+<section class="order-page">
+  <div class="container">
+
+    <span class="badge">🛒 অর্ডার ফর্ম</span>
+
+    <h1 class="section-title">কার্ড অর্ডার করুন</h1>
+
+    <p class="section-subtitle">
+      পেমেন্ট করার পর নিচের তথ্য পূরণ করে WhatsApp-এ অর্ডার পাঠান।
+    </p>
+
+    <div class="order-box card">
+
+      <label>আপনার নাম</label>
+      <input type="text" id="customerName" placeholder="আপনার নাম লিখুন">
+
+      <label>দেশ সিলেক্ট করুন</label>
+      <select id="orderCountry">
+        <option value="saudi">সৌদি আরব</option>
+        <option value="qatar">কাতার</option>
+        <option value="oman">ওমান</option>
+      </select>
+
+      <label>প্যাকেজ সিলেক্ট করুন</label>
+      <select id="orderPackage"></select>
+
+      <div class="price-box">
+        মোট টাকা: <strong id="orderPrice">০</strong>
+      </div>
+
+      <label>বিকাশ নাম্বার</label>
+      <div class="copy-row">
+        <input type="text" id="bkashNumber" value="01862097823" readonly>
+        <button id="copyBkash">Copy</button>
+      </div>
+
+      <p class="payment-note">
+        বিকাশ পারসোনাল। উপরের নাম্বারে টাকা পাঠানোর পর Transaction ID / শেষ ৪ ডিজিট দিন।
+      </p>
+
+      <label>বিকাশ Transaction ID / শেষ ৪ ডিজিট</label>
+      <input type="text" id="trxId" placeholder="যেমন: 1234">
+
+      <label>নোট লিখুন</label>
+      <textarea id="orderNote" placeholder="কোনো বিশেষ কথা থাকলে লিখুন"></textarea>
+
+      <button class="btn order-submit" id="submitOrder">
+        WhatsApp-এ অর্ডার পাঠান
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="../js/order.js"></script>
+</body>
+</html>
