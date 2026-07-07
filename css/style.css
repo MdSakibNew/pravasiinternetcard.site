@@ -939,3 +939,24 @@ section{
   width:100%;
   margin-top:25px;
 }
+
+/* ======================================================
+   FLOATING BUTTONS
+====================================================== */
+
+.float-whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:24px;
+  z-index:998;
+  background:#25D366;
+  color:#fff;
+  padding:15px 22px;
+  border-radius:999px;
+  font-weight:900;
+  box-shadow:var(--shadow-md);
+}
+
+.mobile-bottom-bar{
+  display:none;
+}
