@@ -1022,3 +1022,18 @@ section{
   font-size:14px;
   border:none;
 }
+
+
+/* ===================================
+   Premium Soft Background
+=================================== */
+
+.hero,
+.about-section,
+.owner-section,
+.proof-section,
+.reviews-section,
+.packages-section,
+.faq-section{
+    background:transparent;
+}
