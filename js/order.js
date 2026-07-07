@@ -127,7 +127,7 @@ if (copyBtn && bkashInput) {
   copyBtn.onclick = function () {
     navigator.clipboard.writeText(bkashInput.value);
 
-    copyBtn.innerText = "কপি হয়েছে";
+    copyBtn.innerText = "Copied";
 
     setTimeout(() => {
       copyBtn.innerText = "Copy";
