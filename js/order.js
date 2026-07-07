@@ -3,19 +3,17 @@
    Package + Order System
 ====================================================== */
 
+const commonPackages = [
+  { gb: "100GB", minutes: "700 মিনিট", price: 890, popular: false },
+  { gb: "150GB", minutes: "800 মিনিট", price: 1050, popular: true },
+  { gb: "170GB", minutes: "900 মিনিট", price: 1150, popular: false },
+  { gb: "200GB", minutes: "1000 মিনিট", price: 1300, popular: false }
+];
+
 const packageData = {
-  saudi: [
-    { gb: "100GB", minutes: "700 মিনিট", price: 890, popular: false },
-    { gb: "150GB", minutes: "800 মিনিট", price: 1050, popular: true },
-    { gb: "170GB", minutes: "900 মিনিট", price: 1150, popular: false },
-    { gb: "200GB", minutes: "1000 মিনিট", price: 1300, popular: false }
-  ],
-  qatar: [
-    { gb: "কাতার প্যাকেজ", minutes: "প্যাকেজ জানতে WhatsApp করুন", price: "যোগাযোগ", popular: false }
-  ],
-  oman: [
-    { gb: "ওমান প্যাকেজ", minutes: "প্যাকেজ জানতে WhatsApp করুন", price: "যোগাযোগ", popular: false }
-  ]
+  saudi: commonPackages,
+  qatar: commonPackages,
+  oman: commonPackages
 };
 
 /* ======================================================
