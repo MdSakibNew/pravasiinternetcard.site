@@ -150,6 +150,9 @@ if (submit) {
 
     const packageText = document.getElementById("orderPackage").value;
 
+    const selectedOption = document.getElementById("orderPackage").selectedOptions[0];
+    const packageFullText = selectedOption.textContent;
+
     const price = document.getElementById("orderPackage").selectedOptions[0].dataset.price;
 
     const bkashLast = document.getElementById("trxId").value.trim();
@@ -173,7 +176,9 @@ if (submit) {
 
 নাম: ${name}
 দেশ: ${countryText}
-প্যাকেজ: ${packageText}
+প্যাকেজ: ${packageFullText}
+মেয়াদ: ৩০ দিন
+মিনিট: যে কোনো দেশে কথা বলা যাবে
 মূল্য: ${price} টাকা
 
 বিকাশের শেষ ৪ ডিজিট: ${bkashLast}
