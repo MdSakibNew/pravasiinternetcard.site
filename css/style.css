@@ -960,3 +960,11 @@ section{
 .mobile-bottom-bar{
   display:none;
 }
+
+
+.hero-small-title{
+  margin-top:18px;
+  font-size:22px;
+  font-weight:800;
+  color:var(--primary);
+}
