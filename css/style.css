@@ -1057,3 +1057,14 @@ section{
 
     border:1px solid rgba(255,255,255,.7);
 }
+
+.hero,
+.why-us,
+.owner-section,
+.proof-section,
+.reviews-section,
+.packages-section{
+
+    background:transparent;
+
+}
