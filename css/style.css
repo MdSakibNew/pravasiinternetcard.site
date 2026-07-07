@@ -1037,3 +1037,17 @@ section{
 .faq-section{
     background:transparent;
 }
+
+.card,
+.package-card,
+.review-card,
+.proof-card,
+.owner-card{
+    background:rgba(255,255,255,.93);
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.06);
+
+    border:1px solid rgba(255,255,255,.7);
+}
