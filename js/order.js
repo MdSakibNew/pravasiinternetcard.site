@@ -193,3 +193,15 @@ if (submit) {
     );
   };
 }
+
+.package-info-note{
+    margin:16px 0 24px;
+    padding:16px 18px;
+    background:#eafaf1;
+    border-left:5px solid #16a34a;
+    border-radius:12px;
+    color:#14532d;
+    font-size:15px;
+    line-height:1.8;
+    font-weight:600;
+}
