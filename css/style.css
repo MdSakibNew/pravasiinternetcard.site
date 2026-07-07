@@ -1042,3 +1042,99 @@ section{
     background:transparent;
 
 }
+
+
+/* ======================================================
+   THEME 3: EMIRATES LUXURY UPGRADE
+====================================================== */
+
+.hero{
+    background:
+    radial-gradient(circle at top left, rgba(246,181,0,.22), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(15,143,79,.18), transparent 30%),
+    linear-gradient(135deg,#07140d 0%, #102018 45%, #1a1206 100%);
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-small-title{
+    color:#fff;
+}
+
+.hero-content .badge{
+    background:rgba(246,181,0,.18);
+    color:#ffe7a3;
+    border:1px solid rgba(246,181,0,.35);
+}
+
+.hero-checks span{
+    background:rgba(255,255,255,.10);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.16);
+    backdrop-filter:blur(10px);
+}
+
+.hero-image{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(246,181,0,.25);
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+
+.owner-label{
+    background:linear-gradient(135deg,#0d2518,#1a1206);
+    color:#ffe7a3;
+}
+
+.reviews-section,
+.packages-section{
+    background:
+    radial-gradient(circle at top right, rgba(246,181,0,.16), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(15,143,79,.16), transparent 30%),
+    linear-gradient(135deg,#07140d 0%, #102018 55%, #1a1206 100%);
+}
+
+.reviews-section .section-title,
+.reviews-section .section-subtitle,
+.packages-section .section-title,
+.packages-section .section-subtitle{
+    color:#fff;
+}
+
+.reviews-section .badge,
+.packages-section .badge{
+    background:rgba(246,181,0,.18);
+    color:#ffe7a3;
+    border:1px solid rgba(246,181,0,.35);
+}
+
+.package-card{
+    background:rgba(255,255,255,.96);
+    border:1px solid rgba(246,181,0,.25);
+}
+
+.country-tab{
+    border:1px solid rgba(246,181,0,.25);
+}
+
+.country-tab.active{
+    background:linear-gradient(135deg,#f6b500,#ff8c00);
+    color:#111;
+}
+
+.btn{
+    background:linear-gradient(135deg,#0f8f4f,#066b39);
+}
+
+.btn-outline{
+    background:#fff;
+    color:#0f8f4f;
+}
+
+.btn-outline:hover{
+    background:linear-gradient(135deg,#f6b500,#ff8c00);
+    color:#111;
+}
+
+.float-whatsapp{
+    background:linear-gradient(135deg,#25D366,#0f8f4f);
+}
