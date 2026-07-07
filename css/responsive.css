@@ -199,3 +199,40 @@
     width:100%;
   }
 }
+
+@media (max-width: 576px){
+  .float-whatsapp{
+    display:none;
+  }
+
+  .mobile-bottom-bar{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:999;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#fff;
+    box-shadow:0 -8px 25px rgba(0,0,0,.12);
+  }
+
+  .mobile-bottom-bar a{
+    padding:15px;
+    text-align:center;
+    font-weight:900;
+    color:#fff;
+  }
+
+  .mobile-bottom-bar a:first-child{
+    background:#25D366;
+  }
+
+  .mobile-bottom-bar a:last-child{
+    background:var(--primary);
+  }
+
+  body{
+    padding-bottom:58px;
+  }
+}
