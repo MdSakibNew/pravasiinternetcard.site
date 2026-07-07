@@ -74,8 +74,7 @@ function loadPackages(country) {
 
     option.value = item.gb;
     option.dataset.price = item.price;
-    option.textContent = item.gb + " - " + item.price + (typeof item.price === "number" ? " টাকা" : "");
-
+    option.textContent = item.gb + " + " + item.minutes + " = " + item.price + (typeof item.price === "number" ? " টাকা" : "");
     packageSelect.appendChild(option);
   });
 
