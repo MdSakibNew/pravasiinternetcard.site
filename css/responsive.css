@@ -236,3 +236,34 @@
     padding-bottom:58px;
   }
 }
+
+
+@media (max-width: 576px){
+
+  .reviews-section{
+    overflow:hidden;
+  }
+
+  .review-wrap{
+    gap:8px;
+  }
+
+  .phone-frame{
+    width:270px;
+    padding:10px;
+    border-radius:28px;
+    border-width:5px;
+  }
+
+  .phone-frame img{
+    height:470px;
+    border-radius:20px;
+  }
+
+  .review-arrow{
+    width:42px;
+    height:42px;
+    font-size:30px;
+    flex-shrink:0;
+  }
+}
