@@ -1,3 +1,8 @@
+/* ======================================================
+   প্রবাসী ইন্টারনেট কার্ড
+   Package + Order System
+====================================================== */
+
 const packageData = {
   saudi: [
     { gb: "100GB", minutes: "700 মিনিট", price: 890, popular: false },
@@ -6,12 +11,16 @@ const packageData = {
     { gb: "200GB", minutes: "1000 মিনিট", price: 1300, popular: false }
   ],
   qatar: [
-    { gb: "অর্ডার চালু", minutes: "প্যাকেজ জানতে WhatsApp করুন", price: "যোগাযোগ", popular: false }
+    { gb: "কাতার প্যাকেজ", minutes: "প্যাকেজ জানতে WhatsApp করুন", price: "যোগাযোগ", popular: false }
   ],
   oman: [
-    { gb: "অর্ডার চালু", minutes: "প্যাকেজ জানতে WhatsApp করুন", price: "যোগাযোগ", popular: false }
+    { gb: "ওমান প্যাকেজ", minutes: "প্যাকেজ জানতে WhatsApp করুন", price: "যোগাযোগ", popular: false }
   ]
 };
+
+/* ======================================================
+   Homepage Package Cards
+====================================================== */
 
 const packageGrid = document.getElementById("packageGrid");
 const countryTabs = document.querySelectorAll(".country-tab");
@@ -37,187 +46,148 @@ function renderPackages(country = "saudi") {
   });
 }
 
-countryTabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    countryTabs.forEach(t => t.classList.remove("active"));
-    tab.classList.add("active");
-    renderPackages(tab.dataset.country);
+if (countryTabs.length > 0) {
+  countryTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      countryTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      renderPackages(tab.dataset.country);
+    });
   });
-});
 
-renderPackages("saudi");
+  renderPackages("saudi");
+}
 
 /* ======================================================
-   ORDER PAGE
+   Order Page Package Select
 ====================================================== */
 
 const packageSelect = document.getElementById("orderPackage");
 const countrySelect = document.getElementById("orderCountry");
 const priceText = document.getElementById("orderPrice");
 
-if (packageSelect) {
+function loadPackages(country) {
+  if (!packageSelect || !countrySelect || !priceText) return;
 
-    function loadPackages(country){
+  packageSelect.innerHTML = "";
 
-        packageSelect.innerHTML="";
+  packageData[country].forEach(item => {
+    const option = document.createElement("option");
 
-        packageData[country].forEach(item=>{
+    option.value = item.gb;
+    option.dataset.price = item.price;
+    option.textContent = item.gb + " - " + item.price + (typeof item.price === "number" ? " টাকা" : "");
 
-            const option=document.createElement("option");
+    packageSelect.appendChild(option);
+  });
 
-            option.value=item.gb;
+  updatePrice();
+}
 
-            option.dataset.price=item.price;
+function updatePrice() {
+  if (!packageSelect || !priceText) return;
 
-            option.textContent=item.gb+" - "+item.price+" টাকা";
+  const selected = packageSelect.options[packageSelect.selectedIndex];
 
-            packageSelect.appendChild(option);
+  if (!selected) return;
 
-        });
+  priceText.innerText = selected.dataset.price + (isNaN(selected.dataset.price) ? "" : " টাকা");
+}
 
-        updatePrice();
+if (packageSelect && countrySelect) {
+  countrySelect.onchange = function () {
+    loadPackages(this.value);
+  };
 
-    }
+  packageSelect.onchange = updatePrice;
 
-    function updatePrice(){
+  loadPackages("saudi");
 
-        const selected=packageSelect.options[packageSelect.selectedIndex];
+  const params = new URLSearchParams(window.location.search);
+  const country = params.get("country");
+  const pack = params.get("package");
 
-        priceText.innerText=selected.dataset.price+" টাকা";
+  if (country && packageData[country]) {
+    countrySelect.value = country;
+    loadPackages(country);
+  }
 
-    }
-
-    countrySelect.onchange=function(){
-
-        loadPackages(this.value);
-
-    }
-
-    packageSelect.onchange=updatePrice;
-
-    loadPackages("saudi");
-
-
-
-    /* URL থেকে package select */
-
-    const params=new URLSearchParams(window.location.search);
-
-    const country=params.get("country");
-
-    const pack=params.get("package");
-
-
-
-    if(country){
-
-        countrySelect.value=country;
-
-        loadPackages(country);
-
-    }
-
-
-
-    if(pack){
-
-        packageSelect.value=pack;
-
-        updatePrice();
-
-    }
-
+  if (pack) {
+    packageSelect.value = pack;
+    updatePrice();
+  }
 }
 
 /* ======================================================
-   COPY BKASH
+   Copy bKash Number
 ====================================================== */
 
-const copyBtn=document.getElementById("copyBkash");
+const copyBtn = document.getElementById("copyBkash");
+const bkashInput = document.getElementById("bkashNumber");
 
-if(copyBtn){
+if (copyBtn && bkashInput) {
+  copyBtn.onclick = function () {
+    navigator.clipboard.writeText(bkashInput.value);
 
-copyBtn.onclick=function(){
+    copyBtn.innerText = "কপি হয়েছে";
 
-navigator.clipboard.writeText("01862097823");
-
-copyBtn.innerText="Copied";
-
-setTimeout(()=>{
-
-copyBtn.innerText="Copy";
-
-},1500);
-
-}
-
+    setTimeout(() => {
+      copyBtn.innerText = "Copy";
+    }, 1500);
+  };
 }
 
 /* ======================================================
-   WHATSAPP ORDER
+   WhatsApp Order Submit
 ====================================================== */
 
-const submit=document.getElementById("submitOrder");
+const submit = document.getElementById("submitOrder");
 
-if(submit){
+if (submit) {
+  submit.onclick = function () {
+    const name = document.getElementById("customerName").value.trim();
 
-submit.onclick=function(){
+    const countryText = document.getElementById("orderCountry").options[
+      document.getElementById("orderCountry").selectedIndex
+    ].text;
 
-const name=document.getElementById("customerName").value;
+    const packageText = document.getElementById("orderPackage").value;
 
-const country=document.getElementById("orderCountry").options[
-document.getElementById("orderCountry").selectedIndex].text;
+    const price = document.getElementById("orderPackage").selectedOptions[0].dataset.price;
 
-const pack=document.getElementById("orderPackage").value;
+    const bkashLast = document.getElementById("trxId").value.trim();
 
-const price=document.getElementById("orderPackage").selectedOptions[0].dataset.price;
+    const note = document.getElementById("orderNote").value.trim();
 
-const trx=document.getElementById("trxId").value;
+    if (name === "") {
+      alert("আপনার নাম লিখুন");
+      return;
+    }
 
-const note=document.getElementById("orderNote").value;
+    if (bkashLast === "") {
+      alert("বিকাশের শেষ ৪ ডিজিট লিখুন");
+      return;
+    }
 
-if(name==""){
-
-alert("আপনার নাম লিখুন");
-
-return;
-
-}
-
-if(trx==""){
-
-alert("Transaction ID লিখুন");
-
-return;
-
-}
-
-const message=`
-আসসালামু আলাইকুম।
+    const message =
+`আসসালামু আলাইকুম।
 
 আমি একটি ইন্টারনেট কার্ড অর্ডার করতে চাই।
 
-নামঃ ${name}
+নাম: ${name}
+দেশ: ${countryText}
+প্যাকেজ: ${packageText}
+মূল্য: ${price} টাকা
 
-দেশঃ ${country}
+বিকাশের শেষ ৪ ডিজিট: ${bkashLast}
 
-প্যাকেজঃ ${pack}
+নোট: ${note || "নেই"}
 
-মূল্যঃ ${price} টাকা
+ধন্যবাদ।`;
 
-Transaction IDঃ ${trx}
-
-নোটঃ ${note}
-`;
-
-window.open(
-
-"https://wa.me/8801627330634?text="+encodeURIComponent(message),
-
-"_blank"
-
-);
-
-}
-
+    window.open(
+      "https://wa.me/8801627330634?text=" + encodeURIComponent(message),
+      "_blank"
+    );
+  };
 }
